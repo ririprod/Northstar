@@ -1,0 +1,1478 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wdth,wght@75..100,100..900&display=swap");
+
+/* Roboto Regular */
+/* Roboto Bold */
+
+/* Общие стили */
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Шапка */
+
+.header {
+  padding: 45px 0;
+  position: relative;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Десктопная навигация */
+.header-nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.header-nav a {
+  color: #004a43;
+}
+
+.header-nav a:hover {
+  opacity: 0.8;
+}
+
+.login_links {
+  display: flex;
+  gap: 30px;
+}
+
+.sign-btn {
+  color: #7d77fc;
+  padding: 0.5rem 1rem;
+}
+
+/* Кнопка мобильного меню */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: black;
+}
+
+/* Оверлей */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 998;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Боковое меню */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  z-index: 999;
+  transition: left 0.3s ease;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+.side-menu-header {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #004a43;
+  font-size: 20px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.side-menu-content {
+  padding: 1rem 0;
+}
+
+.side-menu li {
+  margin: 0.5rem 0;
+}
+
+.side-menu a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.side-menu a:hover {
+  background: #f5f5f5;
+}
+
+.side-menu-actions {
+  padding: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.side-sign-btn {
+  display: block;
+  width: 85%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #333;
+}
+
+/* Приветственная секция*/
+
+.welcome {
+  background: #f1f6f6;
+}
+
+.welcome .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome__text {
+  max-width: 550px;
+}
+
+.welcome__title {
+  color: #004a43;
+  font-size: 48px;
+  line-height: 72px;
+  width: 450px;
+  margin-bottom: 8px;
+  margin-top: 130px;
+}
+
+.welcome__desc {
+  color: #345e5a;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33px;
+}
+
+.welcome__btns-wrapper {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 20px 130px;
+
+  border-radius: 12px;
+  background: #ffad3d;
+
+  color: #004a43;
+  font-size: 21px;
+  line-height: 25px;
+
+  transition: opacity 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.click {
+  margin-bottom: 130px;
+}
+
+.click__text {
+  color: #345e5a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.click-link {
+  color: #58d1bd;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration-line: underline;
+}
+
+.welcome__img-wrapper {
+  position: relative;
+  margin: 130px 0;
+  z-index: 1;
+}
+
+.welcome-img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.welcome__img-wrapper::before {
+  content: "";
+
+  width: 200px;
+  height: 200px;
+
+  position: absolute;
+  left: 54px;
+  top: -120px;
+  z-index: -1;
+
+  background-image: url("./Image/icons/star.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.welcome__img-wrapper::after {
+  content: "";
+
+  width: 230px;
+  height: 230px;
+
+  position: absolute;
+  right: -56px;
+  bottom: -116px;
+  z-index: -1;
+
+  background-image: url("./Image/icons/3.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.decoration {
+  position: absolute;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 180px;
+  height: 180px;
+}
+
+.decoration-1 {
+  top: -80px;
+  right: -69px;
+  background-image: url("./Image/icons/1.svg");
+}
+
+.decoration-2 {
+  bottom: -76px;
+  left: -89px;
+  background-image: url("./Image/icons/2.svg");
+}
+
+/* Подсекция */
+
+.subsection {
+  display: flex;
+  background: #f1f6f6;
+  flex-direction: column;
+}
+
+.sub-text {
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  color: #5c9992;
+  text-align: center;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.sub-social {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 50px;
+}
+
+/* Преимущества */
+
+.benefits {
+  margin-bottom: 65px;
+}
+
+.benefits .container {
+  align-items: center;
+}
+
+.benefits__features {
+  text-align: center;
+}
+
+.title {
+  margin-top: 65px;
+
+  text-align: center;
+
+  color: #004a43;
+  font-size: clamp(20px, 5vw, 32px);
+  line-height: clamp(30px, 6vw, 48px);
+}
+
+.features__tools {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 32px;
+}
+
+.tools {
+  width: 390px;
+}
+
+.tools__title {
+  color: #004a43;
+  margin-top: 16px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tools__desc {
+  color: #345e5a;
+  margin-top: 13px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.link {
+  color: #7d77fc;
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 60px;
+}
+
+/* FINANCE */
+
+.finance {
+  padding: 70px 0;
+}
+
+.finance .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.finance__img {
+  max-width: 100%;
+  padding-right: 100px;
+}
+
+.finance__text {
+  max-width: 580px;
+}
+
+.finance__title {
+  color: #004A43;
+font-size: 32px;
+line-height: 48px;
+margin-bottom: 49px;
+}
+
+.finance__desc {
+  color: #345E5A;
+font-size: 15px;
+font-weight: 400;
+line-height: 22px;
+}
+
+/* Масштаб */
+
+.scale {
+  background: #f1f6f6;
+}
+
+.scale__title {
+  padding: 64px 0;
+  margin-bottom: 0;
+}
+
+.scale__card {
+  display: flex;
+
+  gap: 30px;
+  margin: 0 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: inline-block;
+  width: 400px;
+  padding: 35px 30px;
+  padding-bottom: 50px;
+
+  background-color: #fff;
+  border-radius: 18px;
+
+  box-sizing: border-box;
+}
+
+.card__title {
+  color: #004a43;
+  font-size: 18px;
+  line-height: 24px;
+
+  margin: 0;
+}
+
+.card__row {
+  display: flex;
+  align-items: center;
+}
+
+.card__rate {
+  flex-shrink: 0;
+  color: #004a43;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.card__chart {
+  margin-left: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.scale__card .card:nth-of-type(1) .card__chart {
+  background: conic-gradient(#58d1bd 0% 55%, #004a43 55% 100%);
+}
+
+.scale__card .card:nth-of-type(2) .card__chart {
+  background: conic-gradient(#44b8d9 0% 68%, #004a43 68% 100%);
+}
+
+.scale__card .card:nth-of-type(3) .card__chart {
+  background: conic-gradient(#fa70b6 0% 49%, #004a43 49% 100%);
+}
+
+.scale__card .card:nth-of-type(4) .card__chart {
+  background: conic-gradient(#ffad3d 0% 70%, #004a43 70% 100%);
+}
+
+.card__desc {
+  color: #345e5a;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  width: 220px;
+
+  margin: 0;
+}
+
+.sources {
+  color: #5c9992;
+
+  text-align: center;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  margin-top: 30px;
+  padding-bottom: 60px;
+}
+
+/* Опыт */
+
+.experience__text {
+  margin-bottom: 30px;
+}
+
+.list__experiance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 30px 110px;
+}
+
+.full__experience {
+  width: 300px;
+}
+
+.full__title {
+  color: #004a43;
+  font-size: 18px;
+  line-height: 24px;
+
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.full__desc {
+  color: #345e5a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  margin-bottom: 60px;
+}
+
+/* Обратная связь */
+.feedback {
+  background: #f1f6f6;
+}
+
+.feedback__desc {
+  color: #345e5a;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.48px;
+
+  padding: 60px 0;
+  margin: 0 150px;
+}
+
+.feedback__row {
+  display: flex;
+  align-items: center;
+
+  padding-bottom: 60px;
+  margin: 0 150px;
+}
+
+.feedback__img {
+  margin-right: 16px;
+}
+
+.feedback__author {
+  color: #345e5a;
+  font-size: 17px;
+  line-height: 18px;
+  margin-right: 16px;
+}
+
+.feedback__icon {
+  width: 60px;
+}
+
+/* Поддержка */
+
+.support__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 45px;
+  margin-bottom: 100px;
+  gap: 100px;
+}
+
+.support-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.support-item {
+  display: flex;
+  align-items: center;
+
+  color: #004a43;
+  font-size: 20px;
+  gap: 16px;
+}
+
+/* Обслуживание */
+
+.service {
+  background: #f1f6f6;
+  padding: 65px 0;
+}
+.service__titile {
+  margin-top: 0;
+}
+
+.service__card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px 30px;
+  align-items: center;
+}
+
+.service-list__card {
+  width: 490px;
+
+  overflow: hidden;
+  text-align: start;
+
+  background: #ffffff;
+  border-radius: 30px;
+}
+
+.service-list__img {
+  object-fit: cover;
+}
+
+.service-list__text-wrapper {
+  padding: 44px 32px;
+}
+
+.service-list__title {
+  color: #004a43;
+  font-size: 18px;
+  line-height: 24px;
+
+  margin-bottom: 13px;
+  margin-top: 0;
+}
+
+.service-list__desc {
+  color: #345e5a;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+/* Помощь */
+
+.help {
+  background: #004a43;
+  padding: 130px;
+  flex-direction: column;
+}
+
+.help__titile {
+  color: #fff;
+  font-size: 32px;
+  line-height: 48px;
+
+  margin-bottom: 30px;
+}
+
+.help-wrapper-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px 55px;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 63px 0;
+  background: #004a43;
+}
+
+.footer a {
+  color: #D8EBE9;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.footer a:hover {
+  color: rgba(131, 131, 131, 0.9);
+}
+
+.footer .footer__title {
+  display: inline-block;
+  margin-bottom: 13px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 5 колонок */
+  gap: 40px; /* расстояние между ними */
+  align-items: start; /* чтобы всё было по верхнему краю */
+}
+
+.footer__nav .footer__list-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* width: 460px; */
+}
+
+.footer__logo {
+  width: 125px;
+  margin-bottom: 16px;
+}
+
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #D8EBE9;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.footer__text {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.footer__cat {
+  position: relative;
+  height: 100px;
+}
+
+.cat-wrapper {
+  position: absolute;
+  top: 68px;
+}
+
+.footer__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px;
+  white-space: nowrap;
+}
+
+.footer__list-item {
+  margin-bottom: 12px;
+}
+
+.footer__title {
+  margin: 0;
+}
+
+
+@media (max-width: 1260px ) {
+  .welcome__title {
+    font-size: 46px;
+  }
+
+  .welcome__desc {
+    font-size: 20px;
+  }
+
+  .finance__title {
+    font-size: 29px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1230px) {
+  .welcome__img-wrapper::before {
+    width: 150px;
+    height: 150px;
+    top: -88px;
+  }
+
+  .decoration-1 {
+    width: 120px;
+    height: 120px;
+    top: -57px;
+    right: -51px;
+  }
+
+  .decoration-2 {
+    width: 120px;
+    height: 120px;
+    bottom: -50px;
+    left: -50px;
+  }
+
+  .welcome__img-wrapper::after {
+    width: 150px;
+    height: 150px;
+    right: -52px;
+    bottom: -67px;
+  }
+
+  .finance__img {
+    width: 450px;
+  }
+}
+
+@media (max-width: 1200px) {
+    .finance__img {
+    width: 420px;
+  }
+
+  .footer .container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+
+.footer__contacts {
+  flex-direction: row;
+  gap: 50px;
+}
+
+.footer__link {
+  font-size: 16px;
+}
+
+.footer__link a {
+  font-size: 16px;
+}
+
+.cat-wrapper {
+  top: 300px;
+  left: -27px;
+}
+}
+
+@media (max-width: 1189px) {
+  .card {
+    max-width: 395px;
+  }
+}
+
+@media (max-width: 1149px) {
+  .header {
+    padding: 35px 0;
+  }
+
+  .sign-btn {
+    padding: 0 15px;
+  }
+
+  .service-list__card {
+    width: 470px;
+  }
+
+  .footer a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1101px) {
+  .footer__link a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1109px) {
+  .service-list__card {
+    width: 400px;
+  }
+}
+
+@media (max-width: 1087px) {
+  .sign-btn {
+    padding: 0 5px;
+  }
+
+  .welcome .container {
+    flex-direction: column-reverse;
+  }
+
+    .welcome__img {
+    order: 1;
+  }
+
+  .welcome__text {
+    order: 2;
+  }
+
+  .welcome__title {
+    margin-top: 50px;
+  }
+
+
+  .welcome__img-wrapper {
+    margin: 0;
+  } 
+
+  .features__tools {
+    flex-wrap: wrap;
+  }
+
+  .finance {
+    padding: 50px 0;
+  }
+
+  .finance .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .finance__img {
+    margin-bottom: 40px;
+    padding: 0;
+    width: 500px;
+  }
+
+}
+
+@media (max-width: 1059px) {
+  .card {
+    max-width: 350px;
+  }
+
+  .footer__contacts {
+    gap: 40px;
+  }
+}
+
+/* Адаптив */
+@media (max-width: 1040px) {
+  .header-nav,
+  .login_links {
+    display: none;}
+
+  .mobile-menu-btn {
+    display: block;
+}
+}
+
+@media (max-width: 1012px) {
+  .footer__contacts {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 972px) {
+  .footer__contacts {
+    gap: 20px;
+  }
+
+  .footer__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cat-wrapper {
+    top: 575px;
+  }
+}
+
+@media (max-width: 969px) {
+  .card {
+    max-width: 300px;
+  }
+
+  .service-list__card {
+    width: 350px;
+  }
+
+  .service-list__img {
+    margin-left: -70px;
+  }
+}
+
+@media (max-width: 956px) {
+  .finance__title {
+    font-size: 29px;
+  }
+
+  .btn {
+    padding: 20px 95px;
+  }
+
+  .help__titile {
+    font-size: 28px;
+  }
+
+  .help {
+    padding: 75px;
+  }
+}
+
+@media (max-width: 958px) {
+  .support__img {
+    width: 40%;
+  }
+
+  .feedback__desc {
+    font-size: 20px;
+  }
+  .support-item {
+    font-size: 18px;
+  }
+
+  .footer__logo {
+    width: 110px;
+  }
+}
+
+@media (max-width: 917px)  {
+  .footer__contacts {
+    flex-direction: column;
+    margin-bottom: -70px;
+  }
+
+  .cat-wrapper {
+    top: 505px;
+    left: 610px;
+  }
+}
+
+@media (max-width: 869px) {
+  .card {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 813px) {
+  .title {
+    font-size: 26px;
+  }
+  .support__wrapper {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .support__img {
+    width: 50%;
+  }
+
+  .sub-text {
+    margin-top: 80px;
+  }
+
+  .sub-social {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feedback__desc {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 776px) {
+  .welcome__title {
+    font-size: 30px;
+  }
+
+  .welcome__desc {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .finance__title{
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .feedback__desc {
+    font-size: 15px;
+  }
+
+  .feedback__author {
+    font-size: 10px;
+  }
+
+  .feedback__icon {
+    width: 40px;
+  }
+
+  .cat-wrapper {
+    left: 350px;
+  }
+}
+
+@media (max-width: 749px) {
+  .btn {
+    padding: 15px 80px;
+  }
+}
+
+@media (max-width: 719px) {
+  .btn {
+    padding: 15px 60px;
+}
+}
+
+@media (max-width: 679px) {
+  .btn {
+    padding: 15px 50px;
+  }
+}
+
+@media (max-width: 659px)  {
+  .decoration-1 {
+    width: 100px;
+    height: 100px;
+}
+
+  .decoration-2 {
+    width: 100px;
+    height: 100px;
+}
+
+  .welcome__img-wrapper::before {
+    width: 120px;
+    height: 120px;
+    top: -75px;
+}
+
+  .welcome__img-wrapper::after {
+    width: 120px;
+    height: 120px;
+    bottom: -58px;
+  }
+
+  .feedback__desc {
+    margin: 0;
+  }
+
+  .feedback__row {
+    margin: 0;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 12px 40px;
+    font-size: 15px;
+  }
+
+  .help__titile {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+
+  .footer__list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .cat-wrapper {
+    top: 867px;
+  }
+}
+
+@media (max-width: 613px) {
+  .help__titile {
+    font-size: 15px;
+  }
+
+  .help-wrapper-btn {
+    padding: 0;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .welcome__title {
+    font-size: 24px;
+  }
+
+  .welcome__desc {
+    font-size: 16px;
+  }
+
+  .click__text {
+    font-size: 14px;
+  }
+
+  .click-link {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .tools__title {
+    font-size: 16px;
+  }
+
+  .finance__img {
+    max-width: 320px;
+  }
+
+  .finance__title {
+    font-size: 20px;
+  }
+
+  .finance__desc {
+    font-size: 14px;
+  }
+
+  .card__title {
+    font-size: 16px;
+  }
+
+  .card__rate {
+    font-size: 20px;
+  }
+
+  .sources {
+    font-size: 14px;
+  }
+
+  .full__title {
+    font-size: 16px;
+  }
+
+  .full__desc {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .support-item {
+    font-size: 16px;
+  }
+} 
+
+@media (max-width: 515px) {
+  .header {
+    padding: 20px 0;
+  }
+
+  .decoration-1 {
+    width: 70px;
+    height: 70px;
+    top: -30px;
+    right: -25px;
+  }
+
+  .decoration-2 {
+    width: 70px;
+    height: 70px;
+    bottom: -28px;
+    left: -28px;
+  }
+
+  .welcome__img-wrapper::before {
+    width: 100px;
+    height: 100px;
+    top: -39px;
+    left: -49px;
+  }
+
+  .welcome__img-wrapper::after {
+    width: 100px;
+    height: 100px;
+    bottom: -50px;
+    right: -48px;
+}
+  .cat-wrapper {
+    left: 275px;
+  }
+
+  .header {
+    margin: 0px -40px;
+  }
+
+  .header__img-logo {
+    width: 100px;
+  }
+}
+
+@media (max-width: 494px) {
+  .btn {
+    padding: 12px 30px;
+  }
+
+  .help__titile {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 474px) {
+  .btn {
+    padding: 12px 20px;
+  }
+}
+
+
+@media (max-width: 460px) {
+  .welcome__title {
+    width: 355px;
+  }
+}
+
+@media (max-width: 454px) {
+  .help__titile {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+
+  .finance__title {
+    font-size: 18px;
+  }
+
+  .finance__desc {
+    width: 350px;
+  }
+
+  .support-item {
+    font-size: 13px;
+  }
+
+  .service-list__img {
+    margin-left: -120px;
+  }
+
+  .service-list__text-wrapper {
+    padding: 27px 13px;
+  }
+
+  .cat-wrapper {
+    left: 185px;
+  }
+
+  .sub-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 436px) {
+  .btn {
+    padding: 12px 16px;
+  }
+
+  .sources {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 428px) {
+  .service-list__img {
+    width: 400px;
+    margin-left: -65px;
+  }
+
+  .service-list__desc {
+    font-size: 14px;
+  }
+
+  .service-list__title {
+    font-size: 15px;
+  }
+
+  .support__img {
+    width: 72%;
+  }
+
+  .help {
+    padding: 75px 0;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .welcome__desc {
+    font-size: 14px;
+  }
+
+  .welcome__title {
+    font-size: 22px;
+  }
+
+  .click__text {
+    font-size: 12px;
+  }
+
+  .click-link{
+    font-size: 12px;
+  }
+
+  .sub-text {
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 17px;
+  }
+
+  .finance {
+    padding-bottom: 0;
+  }
+
+  .feedback__desc {
+    line-height: 28px;
+  }
+}
+
+
+

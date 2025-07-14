@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northstar Landing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+        <div class="container">
+            <a class="header-logo" href="#">
+                <img src="./Image/logo.png" alt="Logo" class="header__img-logo"/>
+            </a>
+            
+            <!-- Десктопная навигация -->
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#">Use cases</a></li>
+                    <li><a href="#">Financial tools</a></li>
+                    <li><a href="#">Total compensation tools</a></li>
+                    <li><a href="#">Advisors</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+
+            <!-- Кнопки входа -->
+            <div class="login_links">
+                <a href="#" class="sign-btn">Sign In</a>
+                <a href="#" class="sign-btn">Sign Up</a>
+            </div>
+
+            <!-- Кнопка мобильного меню -->
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <!-- Оверлей -->
+    <div class="overlay" onclick="closeMenu()"></div>
+
+    <!-- Боковое меню -->
+    <div class="side-menu">
+        <div class="side-menu-header">
+            <span>Menu</span>
+            <button class="close-btn" onclick="closeMenu()">×</button>
+        </div>
+        
+        <div class="side-menu-content">
+            <ul>
+                <li><a href="#" onclick="closeMenu()">Use cases</a></li>
+                <li><a href="#" onclick="closeMenu()">Financial tools</a></li>
+                <li><a href="#" onclick="closeMenu()">Total compensation tools</a></li>
+                <li><a href="#" onclick="closeMenu()">Advisors</a></li>
+                <li><a href="#" onclick="closeMenu()">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="side-menu-actions">
+            <a href="#" class="side-sign-btn" onclick="closeMenu()">Sign In</a>
+            <a href="#" class="side-sign-btn" onclick="closeMenu()">Sign Up</a>
+        </div>
+    </div>
+
+  <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.side-menu');
+            const overlay = document.querySelector('.overlay');
+            
+            menu.classList.add('active');
+            overlay.classList.add('active');
+        }
+
+        function closeMenu() {
+            const menu = document.querySelector('.side-menu');
+            const overlay = document.querySelector('.overlay');
+            
+            menu.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+    </script>
+
+    <main class="main">
+      <section class="welcome">
+        <div class="container">
+          <div class="welcome__text">
+            <h1 class="welcome__title">Financial wellness starts at work</h1>
+            <p class="welcome__desc">
+              Northstar helps employees better utilize their total compensation
+              and make financial decisions.
+            </p>
+            <div class="welcome__btns-wrapper">
+              <a href="#" class="btn">Learn more</a>
+            </div>
+            <div class="click">
+              <p class="click__text">
+                Interested in a personal membership?
+                <a href="#" class="click-link">Click here</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="welcome__img-wrapper">
+            <img src="./Image/welcome.png" alt="" class="welcome-img" />
+            <div class="decoration decoration-1"></div>
+            <div class="decoration decoration-2"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="subsection">
+        <div class="container">
+          <h2 class="sub-text">
+            Northstar supports employees around the world
+          </h2>
+          <div class="sub-social">
+            <a class="sub__socials-link" href="#"
+              ><img src="./Image/icons/zoom.png" alt=""
+            /></a>
+            <a class="sub__socials-link" href="#"
+              ><img src="./Image/icons/st.png" alt=""
+            /></a>
+            <a class="sub__socials-link" href="#"
+              ><img src="./Image/icons/invitale.png" alt=""
+            /></a>
+            <a class="sub__socials-link" href="#"
+              ><img src="./Image/icons/thumbtack.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits">
+        <div class="container">
+          <div class="benefits__features">
+            <h3 class="title features__title">
+              Northstar takes a holistic approach to financial wellness
+            </h3>
+            <div class="features__tools">
+              <div class="tools">
+                <img src="./Image/icons/1.png" alt="" class="tools-icon" />
+                <h4 class="tools__title">Financial tools</h4>
+                <p class="tools__desc">
+                  Employees can use self-service tools to track progress and
+                  take action on their personal financial goals.
+                </p>
+                <a href="#" class="link tools__link">Learn more</a>
+              </div>
+
+              <div class="tools">
+                <img src="./Image/icons/2.png" alt="" class="tools-icon" />
+                <h4 class="tools__title">Total compensation tools</h4>
+                <p class="tools__desc">
+                  Northstar surfaces how relevant benefits can be utilized to
+                  support employees’ financial or life goals.
+                </p>
+                <a href="#" class="link tools__link">Learn more</a>
+              </div>
+
+              <div class="tools">
+                <img src="./Image/icons/3.png" alt="" class="tools-icon" />
+                <h4 class="tools__title">Full-time financial advisors</h4>
+                <p class="tools__desc">
+                  Each employee is matched with a full-time Northstar Advisor
+                  based on their goals and demographics.
+                </p>
+                <a href="#" class="link tools__link">Learn more</a>
+              </div>
+            </div>
+          </div>
+
+          <section class="finance">
+            <div class="container">
+              <img src="./Image/finans_tabl.png" alt="" class="finance__img" />
+              <div class="finance__text">
+                <h1 class="finance__title">
+                  Make the connection between total compensation and personal
+                  finances
+                </h1>
+                <p class="finance__desc">
+                  Compensation packages are complex and can directly impact
+                  employees’ finances. Northstar’s financial wellness program
+                  helps employees make the most of their employer benefits—from
+                  ESPPs to HSAs—to support their financial and life goals.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="scale">
+        <div class="container">
+          <h4 class="title scale__title">
+            Scale employee support without scaling HR operations
+          </h4>
+
+          <div class="scale__card">
+            <div class="card">
+              <h5 class="card__title">
+                Employees want to get more value from their benefits.
+              </h5>
+              <div class="card__row">
+                <p class="card__rate">55%</p>
+                <p class="card__chart"></p>
+              </div>
+              <p class="card__desc">
+                of employees want to be more informed about benefits.
+              </p>
+            </div>
+
+            <div class="card">
+              <h5 class="card__title">
+                Employees think equity plans are<br />highly complex.
+              </h5>
+              <div class="card__row">
+                <p class="card__rate">68%</p>
+                <p class="card__chart"></p>
+              </div>
+              <p class="card__desc">
+                of employees with equity want to work with a financial advisor.
+              </p>
+            </div>
+
+            <div class="card">
+              <h5 class="card__title">
+                Employees find health plan<br />decisions nerve-wracking.
+              </h5>
+              <div class="card__row">
+                <p class="card__rate">49%</p>
+                <p class="card__chart"></p>
+              </div>
+              <p class="card__desc">
+                of employees say making health care choices are very stressful.
+              </p>
+            </div>
+
+            <div class="card">
+              <h5 class="card__title">
+                Employees aren’t prepared for<br />retirement.
+              </h5>
+              <div class="card__row">
+                <p class="card__rate">70%</p>
+                <p class="card__chart"></p>
+              </div>
+              <p class="card__desc">
+                of employees are saving less for retirement than they should..
+              </p>
+            </div>
+          </div>
+          <div class="sources">
+            Sources: MetLife, UBS, SHRM, Willis Towers Watson
+          </div>
+        </div>
+      </section>
+
+      <section class="experience">
+        <div class="container">
+          <h4 class="title experience__text">
+            Your partner across the full employee experience
+          </h4>
+
+          <div class="list__experiance">
+            <div class="full__experience">
+              <img
+                src="./Image/icons/Onboarding.png"
+                alt=""
+                class="full__icon"
+              />
+              <h5 class="full__title">Onboarding</h5>
+              <p class="full__desc">
+                Support new hires with 401(k) rollover and enrollment, health
+                plan selection, and relevant benefits.
+              </p>
+            </div>
+
+            <div class="full__experience">
+              <img src="./Image/icons/Equity.png" alt="" class="full__icon" />
+              <h5 class="full__title">Equity grants</h5>
+              <p class="full__desc">
+                Explain how ISOs, NSOs, RSUs, and ESPPs work and support
+                decision making around vesting, exercising, and taxation.
+              </p>
+            </div>
+
+            <div class="full__experience">
+              <img src="./Image/icons/Open.png" alt="" class="full__icon" />
+              <h5 class="full__title">Open enrollment</h5>
+              <p class="full__desc">
+                Enable confident decision-making with health plan cost
+                comparison, HSA vs FSA strategies, and insurance choices.
+              </p>
+            </div>
+
+            <div class="full__experience">
+              <img src="./Image/icons/Team.png" alt="" class="full__icon" />
+              <h5 class="full__title">Team presentations</h5>
+              <p class="full__desc">
+                Host sessions on relevant financial topics such as college
+                savings, racial wealth gap, retirement strategies, and more.
+              </p>
+            </div>
+
+            <div class="full__experience">
+              <img src="./Image/icons/Offer.png" alt="" class="full__icon" />
+              <h5 class="full__title">Offer letters</h5>
+              <p class="full__desc">
+                Share the full value of total compensation including salary,
+                equity, retirement, health plans, and perks to candidates.
+              </p>
+            </div>
+
+            <div class="full__experience">
+              <img
+                src="./Image/icons/Offboarding.png"
+                alt=""
+                class="full__icon"
+              />
+              <h5 class="full__title">Offboarding</h5>
+              <p class="full__desc">
+                Support employees leaving with changes in salary, navigating
+                COBRA and new benefits, and transitioning to a new role.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="feedback">
+        <div class="container">
+          <blockqoute class="feedback__text">
+            <p class="feedback__desc">
+              "Northstar financial wellness is a perfect fit with Zoom's
+              employee focus. Our employees are taking up assistance from
+              Northstar's CFPs® at a rapid pace. Northstar is a piece of
+              the wellness puzzle that was missing and we are so happy to provide
+              to our employees."
+            </p>
+            <div class="feedback__row">
+              <img src="./Image/feedback.png" alt="" class="feedback__img" />
+              <p class="feedback__author">
+                Sheila Krueger, Head of Global Benefits, Zoom
+              </p>
+              <img src="./Image/icons/zoom.png" alt="" class="feedback__icon" />
+            </div>
+          </blockqoute>
+        </div>
+      </div>
+
+      <section class="support">
+        <div class="container">
+          <h4 class="title support__title">
+            Northstar supports diverse teams across all life stages
+          </h4>
+          <div class="support__wrapper">
+            <img src="./Image/Support.png" alt="" class="support__img" />
+            <ul class="support-list">
+              <li class="support-item">
+                <img src="./Image/supicon/1.png" alt="" class="support-icon" />
+                <span>Living paycheck-to-paycheck</span>
+              </li>
+              <li class="support-item">
+                <img src="./Image/supicon/2.png" alt="" class="support-icon" />
+                <span>Paying off student loans</span>
+              </li>
+              <li class="support-item">
+                <img src="./Image/supicon/3.png" alt="" class="support-icon" />
+                <span>Getting married or divorced</span>
+              </li>
+              <li class="support-item">
+                <img src="./Image/supicon/4.png" alt="" class="support-icon" />
+                <span>Having a baby or adopting</span>
+              </li>
+              <li class="support-item">
+                <img src="./Image/supicon/5.png" alt="" class="support-icon" />
+                <span>Buying or renovating a home</span>
+              </li>
+              <li class="support-item">
+                <img src="./Image/supicon/6.png" alt="" class="support-icon" />
+                <span>Paying for medical emergencies</span>
+              </li>
+              <li class="support-item">
+                <img src="./Image/supicon/7.png" alt="" class="support-icon" />
+                <span>Understanding taxes</span>
+              </li>
+              <li class="support-item">
+                <img src="./Image/supicon/8.png" alt="" class="support-icon" />
+                <span>LSupporting aging parents</span>
+              </li>
+              <li class="support-item">
+                <img src="./Image/supicon/9.png" alt="" class="support-icon" />
+                <span>Planning for retirement</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="service">
+        <div class="container">
+          <h4 class="title service__titile">
+            Northstar serves both employers and employees
+          </h4>
+          <div class="service__card">
+            <div class="service-list__card">
+              <img
+                src="./Image/service1.png"
+                alt="#"
+                class="service-list__img"
+              />
+              <div class="service-list__text-wrapper">
+                <h5 class="service-list__title">
+                  Help reach your company goals
+                </h5>
+                <p class="service-list__desc">
+                  Northstar's actionable total compensation advice helps drive
+                  benefits adoption, support DEI, attract talent, and more.
+                </p>
+                <a href="#" class="link">Learn more</a>
+              </div>
+            </div>
+            <div class="service-list__card">
+              <img
+                src="./Image/service2.png"
+                alt="#"
+                class="service-list__img"
+              />
+              <div class="service-list__text-wrapper">
+                <h5 class="service-list__title">
+                  Provide personalized support
+                </h5>
+                <p class="service-list__desc">
+                  Northstar's 1-on-1 financial guidance helps enhance your
+                  employee experience and improves satisfaction.
+                </p>
+                <a href="#" class="link">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="help">
+        <div class="container">
+          <div class="help-text">
+            <h4 class="title help__titile">
+              See how Northstar can help scale your team
+            </h4>
+          </div>
+          <div class="help-wrapper-btn">
+            <a href="" class="btn help__btn">Schedule a meeting</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__contacts">
+          <img
+            src="./Image/footerlogo.png"
+            alt="Логотип"
+            class="footer__logo"
+          />
+          <p class="footer__link footer__text">
+            Watt, Inc. 2016–2021. All rights reserved.
+          </p>
+          <p class="footer__link footer__service">
+            <a href="">Terms of Service</a> | <a href="">Privacy Policy</a>
+          </p>
+          <div class="social-icons">
+            <a class="footer__icons" href="#"
+              ><img src="./Image/icons/infooter.png" alt=""
+            /></a>
+            <a class="footer__icons" href="#"
+              ><img src="./Image/icons/twiterfooter.png" alt=""
+            /></a>
+            <a class="footer__icons" href="#"
+              ><img src="./Image/icons/feafooter.png" alt=""
+            /></a>
+          </div>
+          <div class="footer__cat">
+            <img src="./Image/icons/catfooter.png" alt="" class="cat-wrapper" />
+          </div>
+        </div>
+
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__list-title footer__company">
+              <h4 class="footer__title">Company</h4>
+              <ul class="footer__inner-list">
+                <li class="footer__list-item"><a href="#">About</a></li>
+                <li class="footer__list-item"><a href="#">Blog</a></li>
+                <li class="footer__list-item"><a href="#">Careers</a></li>
+                <li class="footer__list-item"><a href="#">For brokers</a></li>
+              </ul>
+            </li>
+
+            <li class="footer__list-title footer__product">
+              <h4 class="footer__title">Product</h4>
+              <ul class="footer__inner-list">
+                <li class="footer__list-item"><a href="#">For companies</a></li>
+                <li class="footer__list-item">
+                  <a href="#">For individuals</a>
+                </li>
+                <li class="footer__list-item"><a href="#">Advisors</a></li>
+                <li class="footer__list-item">
+                  <a href="#">Financial tools</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#">Total compensation tools</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="footer__list-title footer__cases">
+              <h4 class="footer__title">Use Cases</h4>
+              <ul class="footer__inner-list">
+                <li class="footer__list-item">
+                  <a href="#">Support diverse teams</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#">Attract and retain talent</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#">Support benefits decisions</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#">Increase productivity</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#">Prepare for an IPO</a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#">Answer employee questions</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="footer__list-title footer__support">
+              <h4 class="footer__title">Support</h4>
+              <ul class="footer__inner-list">
+                <li class="footer__list-item">
+                  <a href="#">Book a meeting</a>
+                </li>
+                <li class="footer__list-item"><a href="#">Contact us</a></li>
+                <li class="footer__list-item"><a href="#">Sign up</a></li>
+                <li class="footer__list-item"><a href="#">Log in</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
